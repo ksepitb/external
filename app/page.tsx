@@ -1,10 +1,10 @@
-import React from "react";
+import Hero from "@/components/Hero";
 
 const page = () => {
   return (
-    <div className="p-32">
-      <h1>dasdsd</h1>
-    </div>
+    <main className="min-h-screen h-full w-full">
+      <Hero />
+    </main>
   );
 };
 
