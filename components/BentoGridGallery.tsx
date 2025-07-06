@@ -2,16 +2,8 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-
-interface GridItem {
-  id: number;
-  title: string;
-  description: string;
-  href: string;
-  imgSrc: string;
-  className?: string;
-  gradient: string;
-}
+import { GridItem } from "@/types";
+import { gridItems } from "@/data/home";
 
 const BentoGridItem = ({
   item,
@@ -84,48 +76,9 @@ const BentoGridGallery = () => {
     setActiveId((prevId) => (prevId === id ? null : id));
   };
 
-  const gridItems: GridItem[] = [
-    {
-      id: 1,
-      title: "Annual Gathering",
-      description:
-        "Our yearly event to bring all members together for fun and bonding.",
-      href: "/gallery/annual-gathering",
-      imgSrc: "/placeholder.svg",
-      className: "md:col-span-2 md:row-span-2",
-      gradient: "bg-gradient-to-br from-[#541F34] to-[#100C0E]",
-    },
-    {
-      id: 2,
-      title: "Workshop Series",
-      description: "Sharpening skills with industry experts.",
-      href: "/gallery/workshops",
-      imgSrc: "/placeholder.svg",
-      gradient: "bg-gradient-to-br from-[#07507A] to-[#091A23]",
-    },
-    {
-      id: 3,
-      title: "Charity Drive",
-      description: "Giving back to the community that supports us.",
-      href: "/gallery/charity-drive",
-      imgSrc: "/placeholder.svg",
-      gradient: "bg-gradient-to-br from-[#07507A] to-[#091A23]",
-    },
-    {
-      id: 4,
-      title: "KSEP Mabar",
-      description:
-        "Disini kita mabarrrr disini guaa udah guln indo 81 SENGGOL DONG.",
-      href: "/gallery/ksep-mabar",
-      imgSrc: "/placeholder.svg",
-      className: "md:col-span-2",
-      gradient: "bg-gradient-to-br from-[#541F34] to-[#100C0E]",
-    },
-  ];
-
   return (
-    <section className="p-4 md:p-8">
-      <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-[200px] gap-4 max-w-7xl mx-auto">
+    <section className="p-4 md:p-8" data-aos="fade-up" data-aos-duration="3000">
+      <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-[200px] gap-2 md:gap-4 max-w-7xl mx-auto">
         {gridItems.map((item) => (
           <BentoGridItem
             key={item.id}

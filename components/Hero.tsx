@@ -8,7 +8,12 @@ import DottedLine from "@/public/dotted-line1.svg";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import Icon2 from "@/public/element2.png";
-import Placeholder from "@/public/placeholder.svg";
+import NewsDocument from "./NewsDocument";
+import Leaderboard from "./Leaderboard";
+import Dotted from "@/public/dotted.svg";
+import Dotted2 from "@/public/dotted-2.svg";
+import Arrow from "@/public/arrow.svg";
+import Trophy from "@/public/trophy.svg";
 
 import {
   Linkedin,
@@ -41,7 +46,7 @@ const Hero = () => {
 
         {/* Hero content grid */}
         <div className="grid md:grid-cols-[70%_30%] items-center justify-center w-full">
-          <div className="order-2 md:order-1">
+          <div className="order-2 md:order-1" data-aos="fade-right">
             <h2 className="font-bold text-center md:text-left text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
               <span className="relative inline-block">
                 <Image
@@ -73,6 +78,7 @@ const Hero = () => {
             src={MainLogo}
             alt="Logo"
             className="order-1 md:order-2 scale-75 md:scale-125 mx-auto"
+            data-aos="fade-left"
           />
         </div>
       </section>
@@ -84,8 +90,11 @@ const Hero = () => {
         className="absolute top-[100vh] right-0 w-[450px] h-[450px] md:w-[800px] md:h-[800px] -translate-y-3/4 translate-x-[30%] -z-10 scale-200"
       />
 
-      <section className="flex flex-col p-10 md:p-16 lg:p-20 lg:px-32">
-        <div className="relative inline-block text-white mx-auto">
+      <section className="relative flex flex-col p-10 md:p-16 lg:p-20 lg:px-32">
+        <div
+          className="relative inline-block text-white mx-auto"
+          data-aos="zoom-in"
+        >
           <div className="shadow-xl/30 absolute -top-5 -left-10 sm:-top-6 sm:-left-10 md:-top-8 md:-left-10 lg:-top-8 lg:-left-20 -rotate-[1.92deg] bg-gradient-to-r from-[#2680B0] to-[#07507A] text-xl sm:text-2xl md:text-3xl lg:text-4xl px-2 md:px-3 md:py-1 rounded-md font-bold z-10">
             Hello! We Are
           </div>
@@ -118,8 +127,27 @@ const Hero = () => {
         </div>
       </section>
 
-      <section className="flex flex-col px-5 py-20 lg:px-10 lg:py-32">
-        <h2 className="mx-auto font-bold text-center text-3xl sm:text-5xl md:text-6xl lg:text-7xl">
+      <Image
+        src={RedEllipse}
+        alt="Red Ellipse"
+        className="absolute left-0 w-[450px] h-[450px] md:w-[800px] md:h-[800px] -translate-y-1/2 md:-translate-y-3/4 -translate-x-[30%] -z-10 scale-150 md:scale-200"
+      />
+      <Image
+        src={Dotted}
+        alt="Dotted"
+        className="absolute right-0 w-[450px] h-[450px] md:w-[800px] md:h-[800px] translate-x-[40%] -translate-y-3/4 -z-10 scale-75 opacity-50"
+      />
+      <Image
+        src={Dotted2}
+        alt="Dotted"
+        className="absolute left-0 w-[450px] h-[450px] md:w-[800px] md:h-[800px] -translate-x-[40%] -translate-y-1/3 -z-10 scale-75 opacity-50"
+      />
+
+      <section className="relative flex flex-col px-5 py-20 lg:px-10 lg:py-32">
+        <h2
+          className="mx-auto font-bold text-center text-3xl sm:text-5xl md:text-6xl lg:text-7xl"
+          data-aos="zoom-out-up"
+        >
           <span className="relative inline-block">Recent</span>
           <span> </span>
           <span className="relative inline-block rotate-[-2.59deg] mb-2 md:mb-3 md:p-1">
@@ -134,8 +162,96 @@ const Hero = () => {
         </h2>
         <BentoGridGallery />
       </section>
+      <Image
+        src={BlueEllipse}
+        alt="Blue Ellipse"
+        className="absolute right-0 w-[450px] h-[450px] md:w-[800px] md:h-[800px] translate-x-[40%] -translate-y-3/4 -z-10 md:scale-125"
+      />
+      <Image
+        src={BlueEllipse}
+        alt="Blue Ellipse"
+        className="absolute left-0 w-[450px] h-[450px] md:w-[800px] md:h-[800px] -translate-x-[40%] -translate-y-1/3 -z-10 scale-125"
+      />
+      <section className="relative flex flex-col p-10 md:p-16 lg:p-20 lg:px-32">
+        <Image
+          src={Arrow}
+          alt="Arrow"
+          className="absolute -translate-y-1/12 top-0 right-0 w-full -z-10"
+        />
+        <Image
+          src={RedEllipse}
+          alt="Red Ellipse"
+          className="absolute left-0 top-0 -translate-x-[40%]  w-full -z-10 scale-75"
+        />
+        <Image
+          src={BlueEllipse}
+          alt="Red Ellipse"
+          className="absolute block md:hidden right-0 top-1/3 translate-x-[40%]  w-full -z-10 scale-125"
+        />
+        <div
+          className="relative inline-block mx-auto font-bold text-center text-3xl sm:text-5xl md:text-6xl lg:text-7xl"
+          data-aos="flip-down"
+        >
+          <span className="absolute right-0 md:right-10 rotate-[-2.45deg] top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 text-white text-3xl md:text-7xl lg:text-7xl [text-shadow:_0px_0px_31px_rgb(0_0_0_/_0.90)] font-bold">
+            &
+          </span>
+          <span className="relative inline-block rotate-[-2.54deg] mb-1 md:mb-2 md:p-1">
+            <span className="absolute inset-0 bg-gradient-to-r from-[#07507A] to-[#2680B0] rounded-md"></span>
+            <span className="relative px-2">KSEP News</span>
+          </span>
+          <br />
+          <span className="relative inline-block rotate-[1.99deg] md:p-1">
+            <span className="absolute inset-0 bg-gradient-to-r from-[#8A3456] to-[#A7472B]  rounded-md"></span>
+            <span className="relative px-2">Market Recap</span>
+          </span>
+        </div>
+        <NewsDocument />
+      </section>
 
-      <section></section>
+      <section className="relative flex flex-col p-10 md:p-16 lg:p-20 lg:px-32">
+        <Image
+          src={Trophy}
+          alt="Trophy"
+          className="absolute left-0 top-0 -translate-x-[40%] -translate-y-1/4 w-full -z-10 md:scale-50"
+        />
+        <Image
+          src={BlueEllipse}
+          alt="Blue Ellipse"
+          className="absolute right-0 translate-x-[40%] -translate-y-1/3 w-full -z-10 scale-125"
+        />
+        <Image
+          src={RedEllipse}
+          alt="Red Ellipse"
+          className="absolute block md:hidden left-0 -translate-x-[40%] translate-y-1/3 w-full -z-10 scale-125"
+        />
+        <Image
+          src={BlueEllipse}
+          alt="Blue Ellipse"
+          className="absolute block md:hidden left-0 -translate-x-[40%] bottom-0 w-full -z-10 scale-125"
+        />
+        <Image
+          src={RedEllipse}
+          alt="Red Ellipse"
+          className="absolute block md:hidden right-0 translate-x-[40%] translate-y-3/4 w-full -z-10 scale-125"
+        />
+        <Image
+          src={BlueEllipse}
+          alt="Blue Ellipse"
+          className="absolute block md:hidden right-0 translate-x-[40%] -translate-y-1/3 w-full -z-10 scale-125"
+        />
+        <div
+          className="text-center font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl"
+          data-aos="zoom-out-down"
+        >
+          Our
+          <br />
+          <span className="relative inline-block rotate-[-1.41deg] mb-1 md:mb-2 md:p-1 text-3xl sm:text-5xl md:text-6xl lg:text-7xl">
+            <span className="absolute inset-0 bg-gradient-to-r from-[#A6472C] to-[#2680B0] rounded-md"></span>
+            <span className="relative px-2">Achievements</span>
+          </span>
+        </div>
+        <Leaderboard />
+      </section>
 
       <footer className="w-full px-4">
         <div className="max-w-7xl mx-auto py-11 bg-white/10 rounded-[32px] shadow-glass-inset backdrop-blur-[50px]">
