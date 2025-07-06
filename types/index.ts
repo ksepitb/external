@@ -28,12 +28,13 @@ export interface DocumentCardData {
 
 export interface CompetitionData {
   id: number;
+  year: number;
   imageSrc: string;
   position: 1 | 2 | 3 | 4; // Rank, used for styling the tag
   positionText: string; // e.g., "#1 Place", "Runner Up"
   title: string;
   university: string;
   participants: string[];
-  style: "red" | "blue" | "combination"; // Controls the card's theme
+  style?: "red" | "blue" | "combination"; // Controls the card's theme
   className?: string;
 }
