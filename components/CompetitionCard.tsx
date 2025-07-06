@@ -15,7 +15,7 @@ const CompetitionCard = ({ data }: { data: CompetitionData }) => {
     4: "bg-gradient-to-r from-slate-200 to-slate-400 text-slate-700",
   };
 
-  const backgroundGradient = styleVariants[data.style];
+  const backgroundGradient = styleVariants[data.style || "combination"];
   const positionStyle = positionTagStyles[data.position];
   const kontingenTagStyle =
     data.style === "red"

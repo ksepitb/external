@@ -70,6 +70,7 @@ export const documentData: DocumentCardData = {
 export const competitionData: CompetitionData[] = [
   {
     id: 1,
+    year: 2020,
     imageSrc: "/placeholder.svg",
     position: 1,
     positionText: "#1 Place",
@@ -84,6 +85,7 @@ export const competitionData: CompetitionData[] = [
   },
   {
     id: 2,
+    year: 2020,
     imageSrc: "/placeholder.svg",
     position: 2,
     positionText: "#2 Place",
@@ -94,6 +96,7 @@ export const competitionData: CompetitionData[] = [
   },
   {
     id: 3,
+    year: 2020,
     imageSrc: "/placeholder.svg",
     position: 3,
     positionText: "#3 Place",
