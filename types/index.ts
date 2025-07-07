@@ -38,3 +38,25 @@ export interface CompetitionData {
   style?: "red" | "blue" | "combination"; // Controls the card's theme
   className?: string;
 }
+
+export interface GalleryPost {
+  id: number;
+  title: string;
+  description: string;
+  images: string[];
+  coverImage: string;
+}
+
+export interface MediaItem {
+  id: number;
+  type: "youtube" | "spotify";
+  title: string;
+  src: string;
+}
+
+export interface DepartmentEvent {
+  id: number;
+  title: string;
+  description: string;
+  imageSrc: string;
+}
