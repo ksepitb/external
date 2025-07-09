@@ -6,14 +6,8 @@ import BlueEllipse from "@/public/blue-ellipse.svg";
 import RedEllipse from "@/public/red-ellipse.svg";
 import Footer from "@/components/Footer";
 
-type CategoryPageProps = {
-  params: {
-    category: string;
-  };
-};
-
-const page = ({ params }: CategoryPageProps) => {
-  const { category } = params;
+const Page = async ({ params }: { params: { category: string } }) => {
+  const { category } = await params;
 
   const posts = categoryPosts.filter((p) => p.category === category);
 
@@ -77,4 +71,4 @@ const page = ({ params }: CategoryPageProps) => {
   );
 };
 
-export default page;
+export default Page;

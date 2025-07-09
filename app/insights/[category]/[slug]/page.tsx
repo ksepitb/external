@@ -4,14 +4,13 @@ import Image from "next/image";
 import BlueEllipse from "@/public/blue-ellipse.svg";
 import RedEllipse from "@/public/red-ellipse.svg";
 import Footer from "@/components/Footer";
-type PageProps = {
-  params: {
-    category: string;
-    slug: string;
-  };
-};
-const page = ({ params }: PageProps) => {
-  const { category, slug } = params;
+
+const Page = async ({
+  params,
+}: {
+  params: { category: string; slug: string };
+}) => {
+  const { category, slug } = await params;
 
   const post = detailPosts.find(
     (p) => p.category === category && p.slug === slug
@@ -90,4 +89,4 @@ const page = ({ params }: PageProps) => {
   );
 };
 
-export default page;
+export default Page;
