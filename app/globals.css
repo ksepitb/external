@@ -24,3 +24,17 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.shadow-glass-inset {
+  box-shadow: inset 0px 0.8px 2px 0px rgba(255, 255, 255, 0.2),
+    inset 0.8px 0px 15px 0px rgba(255, 255, 255, 0.05);
+}
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
