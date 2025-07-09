@@ -81,7 +81,7 @@ export const competitionData: CompetitionData[] = [
       "Farrel Athalla Putra (KSEP'23)",
       "Farrel Athalla Putra (KSEP'23)",
     ],
-    style: "combination",
+    style: "combination", 
   },
   {
     id: 2,
