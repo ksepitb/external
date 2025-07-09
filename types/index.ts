@@ -60,3 +60,25 @@ export interface DepartmentEvent {
   description: string;
   imageSrc: string;
 }
+
+interface BaseInsightPost {
+  id: number;
+  slug: string;
+  category: "berita-saham" | "berita-makroekonomi" | "market-review";
+  title: string;
+  description: string;
+}
+
+export interface NewsPost extends BaseInsightPost {
+  category: "berita-saham" | "berita-makroekonomi";
+  date: string;
+  imageSrc: string;
+  body: string; // Konten artikel lengkap
+}
+
+export interface MarketReviewPost extends BaseInsightPost {
+  category: "market-review";
+  pdfEmbedLink: string; // Link embed Google Drive
+}
+
+export type InsightPost = NewsPost | MarketReviewPost;
