@@ -4,16 +4,13 @@ import Image from "next/image";
 import BlueEllipse from "@/public/blue-ellipse.svg";
 import RedEllipse from "@/public/red-ellipse.svg";
 import Footer from "@/components/Footer";
-import { Metadata } from "next";
-
 type PageProps = {
   params: {
     category: string;
     slug: string;
   };
 };
-
-const Page = ({ params }: PageProps) => {
+const page = ({ params }: PageProps) => {
   const { category, slug } = params;
 
   const post = detailPosts.find(
@@ -26,7 +23,6 @@ const Page = ({ params }: PageProps) => {
 
   return (
     <main className="pb-5 md:pb-10 isolate relative w-full bg-gradient-to-bl from-[#060911] to-[#232630] text-white overflow-x-hidden">
-      {/* Ellipses */}
       <Image
         src={BlueEllipse}
         alt="Blue Ellipse"
@@ -47,8 +43,6 @@ const Page = ({ params }: PageProps) => {
         alt="Blue Ellipse"
         className="absolute bottom-0 left-0 w-[450px] h-[450px] md:w-[700px] md:h-[700px] -translate-x-[35%] -translate-y-[25%] scale-125 -z-10"
       />
-
-      {/* Content */}
       <div className="mx-auto relative min-h-screen flex flex-col p-10 md:p-16 lg:p-20 lg:px-32">
         <header className="mt-20 mb-8 text-center">
           <p className="text-[#0C3D59] bg-[#E3E0DB] rounded-full px-5 py-2 w-fit mx-auto text-xs md:text-sm font-semibold mt-3 md:mb-5">
@@ -91,10 +85,9 @@ const Page = ({ params }: PageProps) => {
           </article>
         )}
       </div>
-
       <Footer />
     </main>
   );
 };
 
-export default Page;
+export default page;

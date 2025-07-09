@@ -6,7 +6,13 @@ import BlueEllipse from "@/public/blue-ellipse.svg";
 import RedEllipse from "@/public/red-ellipse.svg";
 import Footer from "@/components/Footer";
 
-const page = ({ params }: { params: { category: string } }) => {
+type CategoryPageProps = {
+  params: {
+    category: string;
+  };
+};
+
+const page = ({ params }: CategoryPageProps) => {
   const { category } = params;
 
   const posts = categoryPosts.filter((p) => p.category === category);
