@@ -4,12 +4,13 @@ import Image from "next/image";
 import BlueEllipse from "@/public/blue-ellipse.svg";
 import RedEllipse from "@/public/red-ellipse.svg";
 import Footer from "@/components/Footer";
-
-const Page = async ({
-  params,
-}: {
-  params: { category: string; slug: string };
-}) => {
+type PostDetailPageProps = {
+  params: Promise<{
+    category: string;
+    slug: string;
+  }>;
+};
+const PostDetailPage = async ({ params }: PostDetailPageProps) => {
   const { category, slug } = await params;
 
   const post = detailPosts.find(
@@ -89,4 +90,4 @@ const Page = async ({
   );
 };
 
-export default Page;
+export default PostDetailPage;

@@ -5,8 +5,10 @@ import Image from "next/image";
 import BlueEllipse from "@/public/blue-ellipse.svg";
 import RedEllipse from "@/public/red-ellipse.svg";
 import Footer from "@/components/Footer";
-
-const Page = async ({ params }: { params: { category: string } }) => {
+type CategoryPageProps = {
+  params: Promise<{ category: string }>;
+};
+const CategoryPage = async ({ params }: CategoryPageProps) => {
   const { category } = await params;
 
   const posts = categoryPosts.filter((p) => p.category === category);
@@ -71,4 +73,4 @@ const Page = async ({ params }: { params: { category: string } }) => {
   );
 };
 
-export default Page;
+export default CategoryPage;
