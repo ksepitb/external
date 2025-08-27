@@ -123,7 +123,7 @@ const AchievementsPage = () => {
     <main className="pb-5 md:pb-10 isolate relative w-full bg-gradient-to-bl from-[#060911] to-[#232630] text-white overflow-x-hidden">
       <Image
         src={BlueEllipse}
-        alt="Blue Ellipse"
+        alt="Blue Ellip se"
         className="absolute top-0 right-0 w-[450px] h-[450px] md:w-[700px] md:h-[700px] translate-x-[35%] -translate-y-[25%] scale-125 -z-10"
       />
       <Image
