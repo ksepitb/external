@@ -122,7 +122,7 @@ const page = () => {
           </p>
 
           <div className="relative mt-4">
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 h-full hidden w-full lg:flex items-center justify-center">
+            <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 h-full hidden w-full lg:flex items-center justify-center">
               <Image
                 src={DottedLine}
                 alt="Decorative divider"
