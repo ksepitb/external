@@ -31,15 +31,15 @@ const Footer = () => {
           </div>
 
           {/* Social Links Section */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-4 md:gap-y-6 text-xs md:text-sm">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-4 md:gap-y-6 text-xs md:text-sm px-2 sm:px-0">
             {socialLinks.map((item, index) => (
               <Link
                 key={index}
                 href={item.href}
-                className="flex items-center sm:justify-center gap-3 text-gray-300 hover:text-white transition-colors"
+                className="flex items-center justify-center sm:items-start gap-3 text-gray-300 hover:text-white transition-colors sm:flex-col sm:text-center lg:flex-row lg:text-left"
               >
                 <item.icon className="w-3 h-3 md:w-5 md:h-5 flex-shrink-0" />
-                <span>{item.text}</span>
+                <span className="break-words">{item.text}</span>
               </Link>
             ))}
           </div>
@@ -57,7 +57,7 @@ const Footer = () => {
                 <User className="w-3 h-3 md:w-5 md:h-5" />
                 <span>Nicholas Wise</span>
               </div>
-              <div className="text-xs md:text-sm  flex items-center gap-3">
+              <div className="text-xs md:text-sm flex items-center gap-3">
                 <Phone className="w-3 h-3 md:w-5 md:h-5" />
                 <span>088888888888</span>
               </div>
