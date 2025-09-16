@@ -8,16 +8,16 @@ import WideRedElipse from "@/public/wide-red-elipse.svg";
 import Renaissance from "@/public/renaissance.svg";
 import Dotted2 from "@/public/dotted-2.svg";
 
-import Pres from "@/public/pres.svg";
-import Sekre from "@/public/sekre.svg";
-import Gensec from "@/public/gensec.svg";
-import Treasury from "@/public/treasury.svg";
-import Inrel from "@/public/inrel.svg";
-import Exrel from "@/public/exrel.svg";
-import HR from "@/public/hr.svg";
-import RNCD from "@/public/rncd.svg";
-import CEEM from "@/public/ceem.svg";
-import OpeterGanteng from "@/public/opeterganteng.svg";
+import Pres from "@/public/pres.webp";
+import Sekre from "@/public/sekre.webp";
+import Gensec from "@/public/gensec.webp";
+import Treasury from "@/public/treasury.webp";
+import Inrel from "@/public/inrel.webp";
+import Exrel from "@/public/exrel.webp";
+import HR from "@/public/hr.webp";
+import RNCD from "@/public/rncd.webp";
+import CEEM from "@/public/ceem.webp";
+import OpeterGanteng from "@/public/opeterganteng.webp";
 import TeamCarousel from "@/components/TeamCarousel";
 import Footer from "@/components/Footer";
 
