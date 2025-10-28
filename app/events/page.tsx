@@ -7,7 +7,7 @@ import { Share } from "lucide-react";
 import DottedLine from "@/public/dotted-line2.svg";
 import { mediaData, externalEvents, operationalEvents } from "@/data/events";
 import EventCard from "@/components/EventCard";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { DepartmentEvent } from "@/types";
 import BlueEllipse from "@/public/blue-ellipse.svg";
@@ -43,6 +43,8 @@ const DepartmentSection = ({
       <div className="flex justify-center mb-6">
         <h2
           className={`text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold px-4 md:px-7 py-1 md:py-2 rounded-full ${titleBgClass}`}
+          data-aos="zoom-in"
+          data-aos-delay="100"
         >
           {title}
         </h2>
@@ -59,11 +61,13 @@ const DepartmentSection = ({
           no-scrollbar
         "
       >
-        {events.map((event) => (
+        {events.map((event, idx) => (
           // This wrapper div controls the card's size in the carousel
           <div
             key={event.id}
             className="w-[65vw] lg:w-full flex-shrink-0 snap-center"
+            data-aos="fade-up"
+            data-aos-delay={150 + idx * 100}
           >
             <EventCard event={event} />
           </div>
@@ -71,7 +75,11 @@ const DepartmentSection = ({
       </div>
 
       {/* Arrow Buttons - only visible on screens smaller than lg */}
-      <div className="lg:hidden absolute top-1/2 -translate-y-1/2 w-full flex justify-between px-2 pointer-events-none">
+      <div
+        className="lg:hidden absolute top-1/2 -translate-y-1/2 w-full flex justify-between px-2 pointer-events-none"
+        data-aos="fade-in"
+        data-aos-delay="300"
+      >
         <button
           onClick={() => handleScroll("left")}
           className="pointer-events-auto bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors"
@@ -89,7 +97,24 @@ const DepartmentSection = ({
   );
 };
 
-const page = () => {
+const Page = () => {
+    useEffect(() => {
+    const AOS = require("aos");
+    AOS.init({
+      duration: 800,
+      easing: "ease-out-cubic",
+      once: true,
+      offset: 120,
+    });
+    const refresh = () => AOS.refresh();
+    window.addEventListener("resize", refresh);
+    window.addEventListener("load", refresh);
+    return () => {
+      window.removeEventListener("resize", refresh);
+      window.removeEventListener("load", refresh);
+    };
+  }, []);
+
   return (
     <main className="relative overflow-hidden">
       <div className="isolate relative w-full bg-gradient-to-b from-[#060911] to-[#232630] text-white overflow-hidden">
@@ -104,7 +129,11 @@ const page = () => {
           className="absolute top-0 right-0 w-[450px] h-[450px] md:w-[700px] md:h-[700px] translate-x-[35%] -translate-y-[15%] scale-125 -z-10"
         />
         <div className="relative flex flex-col p-10 md:p-16 lg:p-20 lg:px-32">
-          <div className="text-center font-bold mt-24 md:mt-20 text-3xl sm:text-5xl md:text-6xl lg:text-7xl">
+          <div
+            className="text-center font-bold mt-24 md:mt-20 text-3xl sm:text-5xl md:text-6xl lg:text-7xl"
+            data-aos="zoom-in"
+            data-aos-delay="150"
+          >
             <span className="relative inline-block rotate-[-1.41deg] mb-1 md:mb-2 md:p-1">
               <Image
                 src={Icon}
@@ -117,12 +146,20 @@ const page = () => {
             <br /> in KSEP ITB
           </div>
 
-          <p className="mx-auto mb-5 mt-20 rounded-full font-bold bg-gradient-to-r from-[#267FAF] to-[#093853] w-fit px-4 md:px-7 py-1 text-lg sm:text-xl md:text-2xl lg:text-3xl">
+          <p
+            className="mx-auto mb-5 mt-20 rounded-full font-bold bg-gradient-to-r from-[#267FAF] to-[#093853] w-fit px-4 md:px-7 py-1 text-lg sm:text-xl md:text-2xl lg:text-3xl"
+            data-aos="fade-up"
+            data-aos-delay="250"
+          >
             KSEP Podcast
           </p>
 
           <div className="relative mt-4">
-            <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 h-full hidden w-full lg:flex items-center justify-center">
+            <div
+              className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 h-full hidden w-full lg:flex items-center justify-center"
+              data-aos="fade-in"
+              data-aos-delay="300"
+            >
               <Image
                 src={DottedLine}
                 alt="Decorative divider"
@@ -132,7 +169,11 @@ const page = () => {
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
-              <div className="px-4 md:p-8 text-xs md:text-sm">
+              <div
+                className="px-4 md:p-8 text-xs md:text-sm"
+                data-aos="fade-right"
+                data-aos-delay="200"
+              >
                 <p className="mb-2">Latest from YouTube</p>
                 <Link
                   href="https://www.youtube.com/@ksepitb"
@@ -154,7 +195,11 @@ const page = () => {
                 </div>
               </div>
 
-              <div className="px-4 md:p-8 text-xs md:text-sm">
+              <div
+                className="px-4 md:p-8 text-xs md:text-sm"
+                data-aos="fade-left"
+                data-aos-delay="300"
+              >
                 <p className="mb-2">Latest from Spotify</p>
                 <Link
                   href="https://open.spotify.com/show/7LBV7LvpMF0eFeu22FqgNJ?si=552049c3d10144a1"
@@ -219,4 +264,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

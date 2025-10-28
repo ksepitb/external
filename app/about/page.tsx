@@ -76,7 +76,7 @@ const Page = () => {
       <Image
         src={WideRedElipse}
         alt="Wide Blue Ellipse"
-        className="absolute left-1/2 top-[1800px] md:top-[2400px] w-screen -translate-x-1/2 -translate-y-1/2 -z-10"
+        className="absolute left-1/2 top-[1800px] md:top-[2400px] w-screen -translate-x-1/2 -translate-y-1/2 -z-999"
       />
       <Image
         src={Dotted2}
@@ -106,7 +106,7 @@ const Page = () => {
           >
             Our{" "}
             <span className="relative inline-block">
-              <span className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-sky-800 rounded-md -rotate-1"></span>
+              <span className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-sky-800 rounded-md -rotate-1 my-auto py-7"></span>
               <span className="relative px-2 md:px-3">Vision</span>
             </span>
           </h2>
@@ -130,11 +130,11 @@ const Page = () => {
             data-aos="fade-right"
             data-aos-delay="100"
           >
-            <span className="relative inline-block">
+            <span className="relative inline-block rotate-[-1.41deg]">
               <span className="relative px-2 md:px-3">Our</span>
-            </span>{" "}
-            <span className="relative inline-block">
-              <span className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-sky-800 rounded-md -rotate-1"></span>
+            </span>
+            <span className="relative inline-block -mx-1 rotate-[-1.41deg]">
+              <span className="absolute inset-0 bg-gradient-to-r from-cyan-600 my-auto to-sky-800 rounded-md py-7"></span>
               <span className="relative px-2 md:px-3">Mission</span>
             </span>
           </h2>
@@ -199,7 +199,7 @@ const Page = () => {
           <Image
             src={Renaissance}
             alt="Renaissance"
-            className="mx-auto mt-8 md:mt-16 lg:mt-20 w-[60%] max-w-5xl"
+            className="mx-auto mt-8 md:mt-16 lg:mt-20 w-[80%] max-w-5xl"
           />
         </div>
       </section>
@@ -212,8 +212,8 @@ const Page = () => {
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            <span className="relative inline-block">
-              <span className="absolute inset-0 bg-gradient-to-r from-[#A7472B] to-[#8A3456] rounded-md rotate-1"></span>
+            <span className="relative inline-block rotate-[1.41deg]">
+              <span className="absolute inset-0 bg-gradient-to-r from-[#A7472B] to-[#8A3456] rounded-md py-8"></span>
               <span className="relative px-3 md:px-4">Meet Our Team</span>
             </span>
           </h2>
