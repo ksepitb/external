@@ -8,14 +8,15 @@ import {
   MessageSquare,
   User,
   Phone,
+  Globe,
 } from "lucide-react";
 import Logo from "@/public/logo-ksep2.png";
 
 const socialLinks = [
-  { icon: Linkedin, text: "Kelompok Studi Ekonomi dan Pasar Modal", href: "#" },
-  { icon: Instagram, text: "ksepitb", href: "#" },
-  { icon: Mail, text: "ksepitb@gmail.com", href: "#" },
-  { icon: MessageSquare, text: "ksepitb", href: "#" },
+  { icon: Linkedin, text: "Kelompok Studi Ekonomi dan Pasar Modal", href: "https://www.linkedin.com/company/ksepitb" },
+  { icon: Instagram, text: "ksepitb", href: "https://www.instagram.com/ksep_itb" },
+  { icon: Mail, text: "ksep_itb@km.itb.ac.id", href: "mailto:ksep_itb@km.itb.ac.id" },
+  { icon: Globe, text: "www.ksepitb.com", href: "https://www.ksepitb.com" },
 ];
 
 const Footer = () => {
@@ -55,11 +56,11 @@ const Footer = () => {
               </h4>
               <div className="text-xs md:text-sm flex items-center gap-3 mb-2">
                 <User className="w-3 h-3 md:w-5 md:h-5" />
-                <span>Nicholas Wise</span>
+                <span>Bella</span>
               </div>
               <div className="text-xs md:text-sm flex items-center gap-3">
                 <Phone className="w-3 h-3 md:w-5 md:h-5" />
-                <span>088888888888</span>
+                <span>089513193005</span>
               </div>
             </div>
             <div className="text-gray-400 text-center text-xs sm:text-sm md:text-base md:text-right">

@@ -15,8 +15,12 @@ import Confetti1 from "@/public/confetti.svg";
 import Confetti2 from "@/public/confetti-2.svg";
 import Confetti3 from "@/public/confetti-3.svg";
 import Confetti4 from "@/public/confetti-4.svg";
+import ComingSoon from "@/components/ComingSoon";
 
 const AchievementsPage = () => {
+  return (
+    <ComingSoon />
+  )
   const ITEMS_PER_LOAD = 4;
 
   const [selectedYear, setSelectedYear] = useState<number | "all">("all");
