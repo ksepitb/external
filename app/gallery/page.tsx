@@ -50,7 +50,7 @@ const PostModal = ({
 
   return (
     <div
-      className="fixed inset-0 bg-black/80 backdrop-blur-sm z-[100] flex justify-center items-center p-4"
+      className="fixed inset-0 bg-black/80 backdrop-blur-sm z-[9999] flex justify-center items-center p-4 text-white"
       onClick={onClose}
     >
       <div
@@ -217,85 +217,89 @@ const page = () => {
   };
 
   return (
-    <div className="pb-5 md:pb-10 isolate relative min-h-screen w-full bg-gradient-to-bl from-[#060911] to-[#232630] text-white overflow-hidden">
-      <Image
-        src={BlueEllipse}
-        alt="Blue Ellipse"
-        className="absolute top-0 left-0 w-[450px] h-[450px] md:w-[700px] md:h-[700px] -translate-x-[35%] -translate-y-[15%] scale-125 -z-10"
-      />
-      <Image
-        src={RedEllipse}
-        alt="Red Ellipse"
-        className="absolute top-0 right-0 w-[450px] h-[450px] md:w-[700px] md:h-[700px] translate-x-[35%] -translate-y-[15%] scale-125 -z-10"
-      />
+    <>
+      <div className="pb-5 md:pb-10 isolate relative min-h-screen w-full bg-gradient-to-bl from-[#060911] to-[#232630] text-white overflow-hidden">
+        <Image
+          src={BlueEllipse}
+          alt="Blue Ellipse"
+          className="absolute top-0 left-0 w-[450px] h-[450px] md:w-[700px] md:h-[700px] -translate-x-[35%] -translate-y-[15%] scale-125 -z-10"
+        />
+        <Image
+          src={RedEllipse}
+          alt="Red Ellipse"
+          className="absolute top-0 right-0 w-[450px] h-[450px] md:w-[700px] md:h-[700px] translate-x-[35%] -translate-y-[15%] scale-125 -z-10"
+        />
 
-      <Image
-        src={BlueEllipse}
-        alt="Blue Ellipse"
-        className="absolute top-1/2 right-0 w-[450px] h-[450px] md:w-[700px] md:h-[700px] translate-x-[45%] -translate-y-[15%] scale-125 -z-10"
-      />
-      <Image
-        src={RedEllipse}
-        alt="Red Ellipse"
-        className="absolute top-1/3 left-0 w-[450px] h-[450px] md:w-[700px] md:h-[700px] -translate-x-[45%] -translate-y-[15%] scale-125 -z-10"
-      />
+        <Image
+          src={BlueEllipse}
+          alt="Blue Ellipse"
+          className="absolute top-1/2 right-0 w-[450px] h-[450px] md:w-[700px] md:h-[700px] translate-x-[45%] -translate-y-[15%] scale-125 -z-10"
+        />
+        <Image
+          src={RedEllipse}
+          alt="Red Ellipse"
+          className="absolute top-1/3 left-0 w-[450px] h-[450px] md:w-[700px] md:h-[700px] -translate-x-[45%] -translate-y-[15%] scale-125 -z-10"
+        />
 
-      <Image
-        src={BlueEllipse}
-        alt="Blue Ellipse"
-        className="absolute bottom-0 left-0 w-[450px] h-[450px] md:w-[700px] md:h-[700px] -translate-x-[35%] translate-y-[25%] scale-125 -z-10"
-      />
-      <Image
-        src={RedEllipse}
-        alt="Red Ellipse"
-        className="absolute bottom-0 right-0 w-[450px] h-[450px] md:w-[700px] md:h-[700px] translate-x-[35%] translate-y-[25%] scale-125 -z-10"
-      />
+        <Image
+          src={BlueEllipse}
+          alt="Blue Ellipse"
+          className="absolute bottom-0 left-0 w-[450px] h-[450px] md:w-[700px] md:h-[700px] -translate-x-[35%] translate-y-[25%] scale-125 -z-10"
+        />
+        <Image
+          src={RedEllipse}
+          alt="Red Ellipse"
+          className="absolute bottom-0 right-0 w-[450px] h-[450px] md:w-[700px] md:h-[700px] translate-x-[35%] translate-y-[25%] scale-125 -z-10"
+        />
 
-      <div className="flex flex-col justify-center p-10 md:p-16 lg:p-20 lg:px-32">
-        <div className="text-center font-bold mt-24 md:mt-20 text-3xl sm:text-5xl md:text-6xl lg:text-7xl">
-          <span className="relative inline-block rotate-[-1.41deg] mb-1 md:mb-2 md:p-1">
-            <span className="absolute inset-0 bg-gradient-to-r from-[#A7472B] to-[#8A3456] rounded-md"></span>
-            <span className="relative px-2">Gallery</span>
-          </span>{" "}
-          of
-          <br /> KSEP ITB
-        </div>
+        <div className="flex flex-col justify-center p-10 md:p-16 lg:p-20 lg:px-32">
+          <div className="text-center font-bold mt-24 md:mt-20 text-3xl sm:text-5xl md:text-6xl lg:text-7xl">
+            <span className="relative inline-block rotate-[-1.41deg] mb-1 md:mb-2 md:p-1">
+              <span className="absolute inset-0 bg-gradient-to-r from-[#A7472B] to-[#8A3456] rounded-md"></span>
+              <span className="relative px-2">Gallery</span>
+            </span>{" "}
+            of
+            <br /> KSEP ITB
+          </div>
 
-        <div className="mt-5 md:mt-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-4">
-          {displayedPosts.map((post) => (
-            <div
-              key={post.id}
-              className="relative aspect-square cursor-pointer group"
-              onClick={() => handleOpenModal(post)}
-            >
-              <Image
-                src={post.coverImage}
-                alt={post.title}
-                fill
-                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                className="object-cover rounded-md"
-              />
-              <div className="absolute inset-0 bg-[radial-gradient(ellipse_50.00%_50.00%_at_50.00%_50.00%,_rgba(255,_255,_255,_0)_0%,_rgba(0,_0,_0,_0.50)_100%)] rounded-md z-10 opacity-100"></div>
-              <div className="z-20 absolute bottom-0 left-0 p-4 transition-opacity duration-300 opacity-0 group-hover:opacity-100">
-                <h3 className="font-bold text-white drop-shadow-lg">
-                  {post.title}
-                </h3>
+          <div className="mt-5 md:mt-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-4">
+            {displayedPosts.map((post) => (
+              <div
+                key={post.id}
+                className="relative aspect-square cursor-pointer group"
+                onClick={() => handleOpenModal(post)}
+              >
+                <Image
+                  src={post.coverImage}
+                  alt={post.title}
+                  fill
+                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                  className="object-cover rounded-md"
+                />
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_50.00%_50.00%_at_50.00%_50.00%,_rgba(255,_255,_255,_0)_0%,_rgba(0,_0,_0,_0.50)_100%)] rounded-md z-10 opacity-100"></div>
+                <div className="z-20 absolute bottom-0 left-0 p-4 transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+                  <h3 className="font-bold text-white drop-shadow-lg">
+                    {post.title}
+                  </h3>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+
+          <div
+            ref={sentinelRef}
+            className="h-20 flex justify-center items-center"
+          >
+            {/* FIX: Conditional rendering to show only one state at a time */}
+            {isLoading ? (
+              <Loader2 className="animate-spin" />
+            ) : !hasMore && displayedPosts.length > 0 ? (
+              <p className="text-gray-500"></p>
+            ) : null}
+          </div>
         </div>
 
-        <div
-          ref={sentinelRef}
-          className="h-20 flex justify-center items-center"
-        >
-          {/* FIX: Conditional rendering to show only one state at a time */}
-          {isLoading ? (
-            <Loader2 className="animate-spin" />
-          ) : !hasMore && displayedPosts.length > 0 ? (
-            <p className="text-gray-500"></p>
-          ) : null}
-        </div>
+        <Footer />
       </div>
 
       {activePostIndex !== null && (
@@ -306,8 +310,7 @@ const page = () => {
           onPrevPost={handlePrevPost}
         />
       )}
-      <Footer />
-    </div>
+    </>
   );
 };
 

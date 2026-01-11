@@ -131,7 +131,8 @@ const Navbar = () => {
             <div className="hidden lg:flex items-center">
               <div className="p-[1px] rounded-full bg-gradient-to-r from-[#DC203F] to-[#FF7D46]">
                 <Link
-                  href="/infest"
+                  href="https://www.infestbdg.com/"
+                  target="_blank"
                   className="block bg-[#303030] font-semibold text-white rounded-full transition-all duration-300 hover:scale-105 hover:bg-gradient-to-r from-[#DC203F] to-[#FF7D46] hover:text-[#060911] py-2 px-8 inset-shadow-sm inset-shadow-black"
                 >
                   INFEST
@@ -198,7 +199,8 @@ const Navbar = () => {
 
           <div className="p-[1px] rounded-full bg-gradient-to-r from-[#DC203F] to-[#FF7D46] mt-8">
             <Link
-              href="/infest"
+              href="https://www.infestbdg.com/"
+              target="_blank"
               onClick={() => setMobileMenuOpen(false)}
               className="block bg-[#303030] text-white font-bold rounded-full py-3 px-12 text-xl inset-shadow-sm inset-shadow-black"
             >

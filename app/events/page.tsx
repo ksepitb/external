@@ -5,7 +5,14 @@ import Icon from "@/public/element2.png";
 import Link from "next/link";
 import { Share } from "lucide-react";
 import DottedLine from "@/public/dotted-line2.svg";
-import { mediaData, externalEvents, operationalEvents } from "@/data/events";
+import {
+  mediaData,
+  externalEvents,
+  internalEvents,
+  researchEvents,
+  creativeEvents,
+  operationalEvents,
+} from "@/data/events";
 import EventCard from "@/components/EventCard";
 import { useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -189,7 +196,7 @@ const page = () => {
       <div className="isolate relative w-full bg-gradient-to-b from-[#232630] to-[#8B3553] text-white overflow-hidden">
         <div className="relative flex flex-col p-10 md:p-16 lg:p-20 lg:px-32">
           <DepartmentSection
-            title="External"
+            title="External Relations"
             events={externalEvents}
             titleBgClass="bg-gradient-to-r from-[#A6462A] to-[#8B3456]"
           />
@@ -200,12 +207,44 @@ const page = () => {
         alt="Dotted"
         className="absolute left-0 w-[450px] h-[450px] md:w-[800px] md:h-[800px] -translate-x-[40%] -translate-y-1/3 z-10 scale-[65%] opacity-50"
       />
-      <div className="pb-5 md:pb-10 isolate relative w-full bg-gradient-to-b from-[#8B3553] to-[#0A3B56] text-white overflow-hidden">
+      <div className="isolate relative w-full bg-gradient-to-b from-[#8B3553] to-[#0A3B56] text-white overflow-hidden">
         <div className="relative flex flex-col p-10 md:p-16 lg:p-20 lg:px-32">
           <DepartmentSection
-            title="Operational Handsome"
-            events={operationalEvents}
+            title="Internal Relations"
+            events={internalEvents}
             titleBgClass="bg-gradient-to-r from-[#2680B0] to-[#093752]"
+          />
+        </div>
+      </div>
+      <div className="isolate relative w-full bg-gradient-to-b from-[#0A3B56] to-[#8B3553] text-white overflow-hidden">
+        <div className="relative flex flex-col p-10 md:p-16 lg:p-20 lg:px-32">
+          <DepartmentSection
+            title="Research & Curriculum Development"
+            events={researchEvents}
+            titleBgClass="bg-gradient-to-r from-[#A6462A] to-[#8B3456]"
+          />
+        </div>
+      </div>
+      <Image
+        src={Dotted2}
+        alt="Dotted"
+        className="absolute left-0 w-[450px] h-[450px] md:w-[800px] md:h-[800px] -translate-x-[40%] -translate-y-1/3 z-10 scale-[65%] opacity-50"
+      />
+      <div className="isolate relative w-full bg-gradient-to-b from-[#8B3553] to-[#0A3B56] text-white overflow-hidden">
+        <div className="relative flex flex-col p-10 md:p-16 lg:p-20 lg:px-32">
+          <DepartmentSection
+            title="Creative Marketing"
+            events={creativeEvents}
+            titleBgClass="bg-gradient-to-r from-[#2680B0] to-[#093752]"
+          />
+        </div>
+      </div>
+      <div className="isolate relative w-full bg-gradient-to-b from-[#0A3B56] to-[#8B3553] text-white overflow-hidden">
+        <div className="relative flex flex-col p-10 md:p-16 lg:p-20 lg:px-32">
+          <DepartmentSection
+            title="Operational"
+            events={operationalEvents}
+            titleBgClass="bg-gradient-to-r from-[#A6462A] to-[#8B3456]"
           />
         </div>
         <Footer />

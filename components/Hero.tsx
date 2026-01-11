@@ -104,7 +104,7 @@ const Hero = () => {
         </div>
         <div className="mx-auto p-[1px] md:p-[2px] rounded-full bg-gradient-to-r from-[#DC203F] to-[#FF7D46] mt-6">
           <Link
-            href="/infest"
+            href="/about"
             className="flex items-center text-sm sm:text-base md:text-xl gap-3 bg-[#303030] text-white rounded-full transition-all duration-300 hover:scale-[110%] hover:bg-gradient-to-r from-[#DC203F] to-[#FF7D46] hover:text-[#060911] py-2 md:py-3 pl-5 md:pl-9 pr-3 md:pr-6 inset-shadow-sm inset-shadow-black"
           >
             See More <ChevronRight className="w-4 md:w-8" />
