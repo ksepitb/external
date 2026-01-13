@@ -4,12 +4,63 @@ import Image from "next/image";
 import BlueEllipse from "@/public/blue-ellipse.svg";
 import RedEllipse from "@/public/red-ellipse.svg";
 import Footer from "@/components/Footer";
+import { Metadata } from "next";
+
 type PostDetailPageProps = {
   params: Promise<{
     category: string;
     slug: string;
   }>;
 };
+
+export async function generateMetadata({
+  params,
+}: PostDetailPageProps): Promise<Metadata> {
+  const { category, slug } = await params;
+  const post = detailPosts.find(
+    (p) => p.category === category && p.slug === slug
+  );
+
+  if (!post) {
+    return {
+      title: "Post Not Found",
+    };
+  }
+
+  const categoryName = category
+    .replace("-", " ")
+    .split(" ")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+
+  const imageSrc =
+    post.category === "market-review" ? "/og-image.png" : post.imageSrc;
+
+  return {
+    title: post.title,
+    description: post.description,
+    keywords: [
+      categoryName,
+      "KSEP ITB",
+      "pasar modal",
+      "berita ekonomi",
+      post.title,
+    ],
+    openGraph: {
+      title: `${post.title} | KSEP ITB`,
+      description: post.description,
+      type: "article",
+      images: [imageSrc],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.description,
+      images: [imageSrc],
+    },
+  };
+}
+
 const PostDetailPage = async ({ params }: PostDetailPageProps) => {
   const { category, slug } = await params;
 
@@ -79,8 +130,10 @@ const PostDetailPage = async ({ params }: PostDetailPageProps) => {
                 className="object-cover"
               />
             </div>
-            <div className="prose prose-invert text-sm md:text-base max-w-none mb-20">
-              <p>{post.body}</p>
+            <div className="prose prose-invert text-sm md:text-base max-w-none mb-20 space-y-4">
+              {post.body.map((paragraph, index) => (
+                <p key={index}>{paragraph}</p>
+              ))}
             </div>
           </article>
         )}

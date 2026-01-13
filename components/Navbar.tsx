@@ -18,7 +18,7 @@ const navLinks: NavLink[] = [
   { name: "INSIGHTS", href: "/insights" },
   { name: "EVENTS", href: "/events" },
   { name: "GALLERY", href: "/gallery" },
-  { name: "ACHIEVEMENTS", href: "/achievements" },
+  // { name: "ACHIEVEMENTS", href: "/achievements" },
 ];
 
 const MenuIcon = ({ className = "" }) => (

@@ -9,6 +9,29 @@ import RedEllipse from "@/public/red-ellipse.svg";
 import Arrow from "@/public/arrow.svg";
 import Chart from "@/public/chart.svg";
 import Footer from "@/components/Footer";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Insights - Berita Saham, Makroekonomi & Market Review",
+  description:
+    "Dapatkan berita terkini seputar saham, makroekonomi, dan market review dari KSEP ITB. Analisis pasar modal Indonesia dan global yang komprehensif.",
+  keywords: [
+    "berita saham",
+    "berita makroekonomi",
+    "market review",
+    "IHSG",
+    "pasar modal Indonesia",
+    "analisis saham",
+    "KSEP ITB",
+  ],
+  openGraph: {
+    title: "Insights - Berita Saham, Makroekonomi & Market Review | KSEP ITB",
+    description:
+      "Dapatkan berita terkini seputar saham, makroekonomi, dan market review dari KSEP ITB.",
+    images: ["/og-image.png"],
+  },
+};
+
 const newsPosts = allInsightPosts.filter(
   (post): post is NewsPost => post.category !== "market-review"
 );

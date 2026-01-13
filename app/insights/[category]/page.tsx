@@ -5,9 +5,52 @@ import Image from "next/image";
 import BlueEllipse from "@/public/blue-ellipse.svg";
 import RedEllipse from "@/public/red-ellipse.svg";
 import Footer from "@/components/Footer";
+import { Metadata } from "next";
+
 type CategoryPageProps = {
   params: Promise<{ category: string }>;
 };
+
+const categoryDescriptions: Record<
+  string,
+  { title: string; description: string }
+> = {
+  "berita-saham": {
+    title: "Berita Saham - Analisis & Update Pasar Saham Indonesia",
+    description:
+      "Berita terkini seputar pasar saham Indonesia, analisis emiten, IPO, dan pergerakan IHSG dari KSEP ITB.",
+  },
+  "berita-makroekonomi": {
+    title: "Berita Makroekonomi - Update Ekonomi Indonesia & Global",
+    description:
+      "Berita dan analisis ekonomi makro Indonesia dan global, termasuk kebijakan moneter, inflasi, dan pertumbuhan ekonomi.",
+  },
+  "market-review": {
+    title: "Market Review - Laporan Analisis Pasar KSEP ITB",
+    description:
+      "Laporan market review bulanan dari KSEP ITB, berisi analisis komprehensif pergerakan pasar saham dan ekonomi.",
+  },
+};
+
+export async function generateMetadata({
+  params,
+}: CategoryPageProps): Promise<Metadata> {
+  const { category } = await params;
+  const meta = categoryDescriptions[category] || {
+    title: "Insights",
+    description: "Berita dan analisis dari KSEP ITB",
+  };
+
+  return {
+    title: meta.title,
+    description: meta.description,
+    openGraph: {
+      title: `${meta.title} | KSEP ITB`,
+      description: meta.description,
+      images: ["/og-image.png"],
+    },
+  };
+}
 const CategoryPage = async ({ params }: CategoryPageProps) => {
   const { category } = await params;
 

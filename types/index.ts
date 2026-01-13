@@ -73,7 +73,7 @@ export interface NewsPost extends BaseInsightPost {
   category: "berita-saham" | "berita-makroekonomi";
   date: string;
   imageSrc: string;
-  body: string; // Konten artikel lengkap
+  body: string[]; // Array of paragraphs for article content
 }
 
 export interface MarketReviewPost extends BaseInsightPost {

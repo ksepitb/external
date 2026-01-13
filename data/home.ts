@@ -9,37 +9,39 @@ import {
 export const gridItems: GridItem[] = [
   {
     id: 1,
-    title: "Annual Gathering",
+    title: "Company Visit",
     description:
-      "Our yearly event to bring all members together for fun and bonding.",
-    href: "/gallery/annual-gathering",
-    imgSrc: "/placeholder.svg",
+      "Communal visits to  Indonesia Stock Exchange and select company headquarters relevant to our field of study (Capital Market and Finance).",
+    href: "/gallery",
+    imgSrc: "/gallery1/1.webp",
     className: "md:col-span-2 md:row-span-2",
     gradient: "bg-gradient-to-br from-[#541F34] to-[#100C0E]",
   },
   {
     id: 2,
-    title: "Workshop Series",
-    description: "Sharpening skills with industry experts.",
-    href: "/gallery/workshops",
-    imgSrc: "/placeholder.svg",
+    title: "Studi Banding",
+    description:
+      "A casual discussion between capital market student communities to share insights and experiences.",
+    href: "/gallery",
+    imgSrc: "/gallery2/2.webp",
     gradient: "bg-gradient-to-br from-[#07507A] to-[#091A23]",
   },
   {
     id: 3,
-    title: "Charity Drive",
-    description: "Giving back to the community that supports us.",
-    href: "/gallery/charity-drive",
-    imgSrc: "/placeholder.svg",
+    title: "KSEP Super Day",
+    description:
+      "A KSEP ITB anniversary event sharing its history through Instagram.",
+    href: "/gallery",
+    imgSrc: "/gallery3/1.webp",
     gradient: "bg-gradient-to-br from-[#07507A] to-[#091A23]",
   },
   {
     id: 4,
-    title: "KSEP Mabar",
+    title: "KSEP Farewell",
     description:
-      "Disini kita mabarrrr disini guaa udah guln indo 81 SENGGOL DONG.",
-    href: "/gallery/ksep-mabar",
-    imgSrc: "/placeholder.svg",
+      "Appreciation in the form of a togetherness event or giving souvenirs to KSEP ITB graduates.",
+    href: "/gallery",
+    imgSrc: "/gallery4/2.webp",
     className: "md:col-span-2",
     gradient: "bg-gradient-to-br from-[#541F34] to-[#100C0E]",
   },
@@ -49,21 +51,21 @@ export const gridItems: GridItem[] = [
 export const newsData: NewsCardData = {
   id: 1,
   category: "Berita Saham",
-  date: "23 Juni 2025",
-  title: "Prajogo Pangestu Bawa CDIA IPO ke Bursa",
+  date: "9 Januari 2026",
+  title: "RLCO ARA 17 Hari Berturut-turut, Emiten Prajogo Pangestu Kalah",
   description:
-    "CDIA anak usaha PT Chandra Asri Pacific Tbk (TPIA), buka penawaran IPO dengan potensi market cap Rp21-24 T. Perusahaan ini berfokus pada infrastruktur adsasdasdasdasdasdasdsd",
-  imageSrc: "/placeholder.svg",
-  link: "/berita/cdia-ipo",
+    "CPasar saham Indonesia kembali dihebohkan oleh fenomena kenaikan harga saham yang luar biasa dari emiten pendatang baru. Saham PT Abadi Lestari Indonesia Tbk (RLCO), yang merupakan perusahaan holding dari merek Realfood, berhasil mencatatkan rekor kenaikan fantastis sebesar 1.810% sejak penawaran umum perdana (IPO). Prestasi ini ditandai dengan pencapaian Auto Reject Atas (ARA) selama 17 hari perdagangan berturut-turut.",
+  imageSrc: "/berita/1.webp",
+  link: "/insights/berita-saham/rlco-ara-17-hari-berturut-turut-emiten-prajogo-pangestu-kalah",
 };
 
 // Market Recap
 export const documentData: DocumentCardData = {
   id: 1,
   category: "Market Recap",
-  title: "Ini nama dokumen dasdasdasda asdasdasdasda asdddddddd dasdasdasd",
-  imageSrc: "/placeholder.svg",
-  link: "/dokumen/market-recap-juni-25",
+  title: "KSEP Market Review #6 (Edisi Desember)",
+  imageSrc: "/berita/cover.webp",
+  link: "/insights/market-review/ksep-market-review-6-edisi-desember",
 };
 
 // Our Achievements
@@ -81,7 +83,7 @@ export const competitionData: CompetitionData[] = [
       "Farrel Athalla Putra (KSEP'23)",
       "Farrel Athalla Putra (KSEP'23)",
     ],
-    style: "combination", 
+    style: "combination",
   },
   {
     id: 2,

@@ -3,66 +3,48 @@ import { GalleryPost } from "@/types";
 export const allPostsData: GalleryPost[] = [
   {
     id: 1,
-    title: "KSEP Mabar",
+    title: "Company Visit",
     description:
-      "Sesi mabar seru bareng anak-anak KSEP. Main bareng, ketawa bareng, dan tentunya, menang bareng! Momen kebersamaan yang tak terlupakan.",
-    images: ["/placeholder.svg", "/placeholder2.svg", "/placeholder.svg"],
-    coverImage: "/placeholder.svg",
+      "KSEP ITB invites its members to go on a trip from ITB to visit the Indonesia Stock Exchange headquarters in Jakarta and other companies within an arranged meeting. These visits aim to provide experience and knowledge given from the insightful people of the Capital Market and competent leaders of Indonesia's top companies.",
+    images: [
+      "/gallery1/1.webp",
+      "/gallery1/2.webp",
+      "/gallery1/3.webp",
+      "/gallery1/4.webp",
+      "/gallery1/5.webp",
+      "/gallery1/6.webp",
+    ],
+    coverImage: "/gallery1/1.webp",
   },
   {
     id: 2,
-    title: "Annual Gathering 2024",
+    title: "Studi Banding",
     description:
-      "Acara tahunan kami yang paling ditunggu. Penuh dengan game, musik, dan penghargaan untuk anggota terbaik.",
-    images: ["/placeholder.svg"],
-    coverImage: "/placeholder.svg",
+      "The need to be progressive is crucial to satiate, as a dynamic organization pushes its limits to not linger on the past, but look to the future. KSEP ITB invites fellow Capital Market Study Communities from other universities in a comparrative discussion to evaluate and shape a more suitable system in which we thrive in.",
+    images: [
+      "/gallery2/1.webp",
+      "/gallery2/2.webp",
+      "/gallery2/3.webp",
+      "/gallery2/4.webp",
+      "/gallery2/5.webp",
+      "/gallery2/6.webp",
+    ],
+    coverImage: "/gallery2/1.webp",
   },
   {
     id: 3,
-    title: "Workshop Investasi",
+    title: "KSEP Super Day",
     description:
-      "Belajar bareng para ahli tentang strategi investasi di pasar modal. Sesi yang sangat insightful dan membuka wawasan.",
-    images: ["/placeholder.svg", "/placeholder2.svg", "/placeholder.svg"],
-    coverImage: "/placeholder.svg",
+      "An event to celebrate KSEP ITB's anniversary. Repurposing an internal Instagram account as a platform to share the history of KSEP ITB.",
+    images: ["/gallery3/1.webp", "/gallery3/2.webp", "/gallery3/3.webp"],
+    coverImage: "/gallery3/1.webp",
   },
   {
     id: 4,
-    title: "Studi Banding ke IDX",
+    title: "KSEP Farewell",
     description:
-      "Kunjungan edukatif ke Bursa Efek Indonesia. Melihat langsung bagaimana pasar bekerja dan berdiskusi dengan para profesional.",
-    images: ["/placeholder.svg", "/placeholder2.svg", "/placeholder.svg"],
-    coverImage: "/placeholder.svg",
-  },
-  {
-    id: 5,
-    title: "Charity Event: KSEP Peduli",
-    description:
-      "Berbagi kebahagiaan dengan sesama melalui acara bakti sosial. Sebuah pengingat bahwa kita tumbuh bersama masyarakat.",
-    images: ["/placeholder.svg", "/placeholder2.svg", "/placeholder.svg"],
-    coverImage: "/placeholder.svg",
-  },
-  {
-    id: 6,
-    title: "Welcoming New Members",
-    description:
-      "Menyambut anggota baru angkatan 2025! Selamat datang di keluarga besar KSEP ITB.",
-    images: ["/placeholder.svg", "/placeholder2.svg", "/placeholder.svg"],
-    coverImage: "/placeholder.svg",
-  },
-  {
-    id: 7,
-    title: "Competition Team Briefing",
-    description:
-      "Sesi persiapan intensif untuk tim kompetisi. Strategi, analisis, dan semangat juang yang membara.",
-    images: ["/placeholder.svg", "/placeholder2.svg", "/placeholder.svg"],
-    coverImage: "/placeholder.svg",
-  },
-  {
-    id: 8,
-    title: "End of Year Dinner",
-    description:
-      "Makan malam bersama untuk menutup tahun yang luar biasa. Terima kasih atas kerja keras dan dedikasi semua anggota.",
-    images: ["/placeholder.svg", "/placeholder2.svg", "/placeholder.svg"],
-    coverImage: "/placeholder.svg",
+      "Appreciation in the form of a togetherness event or giving souvenirs to KSEP ITB graduates.",
+    images: ["/gallery4/1.webp", "/gallery4/2.webp", "/gallery4/3.webp"],
+    coverImage: "/gallery4/1.webp",
   },
 ];

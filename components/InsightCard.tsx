@@ -39,13 +39,23 @@ const InsightCard = ({ post }: { post: InsightPost }) => {
           {/* FIX: Conditional rendering for Image vs PDF Preview */}
           <div className="relative w-full aspect-video mb-4 rounded-lg overflow-hidden">
             {isReview ? (
-              // Tampilkan iframe untuk Market Review
-              <iframe
-                src={`${post.pdfEmbedLink}#toolbar=0&navpanes=0`}
-                className="w-full h-full border-0"
-                title={`Preview of ${post.title}`}
-                style={{ pointerEvents: "none" }}
-              ></iframe>
+              // Tampilkan iframe untuk Market Review - hide toolbar using CSS clipping
+              <div className="relative w-full h-full overflow-hidden">
+                <iframe
+                  src={`${post.pdfEmbedLink}#toolbar=0&navpanes=0&scrollbar=0`}
+                  className="absolute border-0"
+                  title={`Preview of ${post.title}`}
+                  style={{
+                    pointerEvents: "none",
+                    width: "200%",
+                    height: "350%",
+                    top: "-123%",
+                    left: "-50%",
+                    transform: "scale(0.7)",
+                    transformOrigin: "center center",
+                  }}
+                ></iframe>
+              </div>
             ) : (
               // Tampilkan Image untuk Berita
               <Image

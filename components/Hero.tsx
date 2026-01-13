@@ -193,7 +193,7 @@ const Hero = () => {
         <NewsDocument />
       </section>
 
-      <section className="relative flex flex-col p-10 md:p-16 lg:p-20 lg:px-32">
+      {/* <section className="relative flex flex-col p-10 md:p-16 lg:p-20 lg:px-32">
         <Image
           src={Trophy}
           alt="Trophy"
@@ -236,7 +236,7 @@ const Hero = () => {
           </span>
         </div>
         <Leaderboard />
-      </section>
+      </section> */}
 
       <Footer />
     </main>
