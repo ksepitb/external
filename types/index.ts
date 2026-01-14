@@ -79,6 +79,7 @@ export interface NewsPost extends BaseInsightPost {
 export interface MarketReviewPost extends BaseInsightPost {
   category: "market-review";
   pdfEmbedLink: string; // Link embed Google Drive
+  coverImage: string; // Cover image for the market review
 }
 
 export type InsightPost = NewsPost | MarketReviewPost;

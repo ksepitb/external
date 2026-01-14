@@ -125,12 +125,12 @@ const page = () => {
         />
         <div className="flex flex-col justify-center p-10 md:p-16 lg:p-20 lg:px-32">
           <div className="flex justify-between items-center mb-6">
-            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold px-5 py-2 rounded-full bg-gradient-to-r from-[#267FAF] to-[#093853] inset-shadow-sm inset-shadow-black">
+            <h2 className="text-md sm:text-xl md:text-2xl lg:text-3xl font-bold px-5 py-2 rounded-full bg-gradient-to-r from-[#267FAF] to-[#093853] inset-shadow-sm inset-shadow-black">
               Berita Makroekonomi
             </h2>
             <Link
               href="/insights/berita-makroekonomi"
-              className="text-xs smd:text-sm font-light rounded-full px-5 py-2 border-[1px] hover:bg-white/10 transition-colors"
+              className="text-center text-xs smd:text-sm font-light rounded-full px-5 py-2 border-[1px] hover:bg-white/10 transition-colors"
             >
               See more
             </Link>

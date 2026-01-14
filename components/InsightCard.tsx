@@ -39,22 +39,33 @@ const InsightCard = ({ post }: { post: InsightPost }) => {
           {/* FIX: Conditional rendering for Image vs PDF Preview */}
           <div className="relative w-full aspect-video mb-4 rounded-lg overflow-hidden">
             {isReview ? (
-              // Tampilkan iframe untuk Market Review - hide toolbar using CSS clipping
-              <div className="relative w-full h-full overflow-hidden">
-                <iframe
-                  src={`${post.pdfEmbedLink}#toolbar=0&navpanes=0&scrollbar=0`}
-                  className="absolute border-0"
-                  title={`Preview of ${post.title}`}
-                  style={{
-                    pointerEvents: "none",
-                    width: "200%",
-                    height: "350%",
-                    top: "-123%",
-                    left: "-50%",
-                    transform: "scale(0.7)",
-                    transformOrigin: "center center",
-                  }}
-                ></iframe>
+              // Show static cover image for Market Review to prevent mobile crashes
+              <div className="relative w-full h-full bg-gradient-to-br from-gray-800 to-gray-900">
+                <Image
+                  src={post.coverImage}
+                  alt={post.title}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+                  <div className="bg-white/20 backdrop-blur-sm rounded-full p-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-8 w-8 text-white"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                      />
+                    </svg>
+                  </div>
+                </div>
               </div>
             ) : (
               // Tampilkan Image untuk Berita

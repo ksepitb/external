@@ -49,7 +49,7 @@ const DepartmentSection = ({
       {/* Department Title */}
       <div className="flex justify-center mb-6">
         <h2
-          className={`text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold px-4 md:px-7 py-1 md:py-2 rounded-full ${titleBgClass}`}
+          className={`text-center text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold px-4 md:px-7 py-1 md:py-2 rounded-full ${titleBgClass}`}
         >
           {title}
         </h2>

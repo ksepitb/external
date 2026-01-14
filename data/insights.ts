@@ -238,6 +238,7 @@ const posts: (Omit<NewsPost, "slug"> | Omit<MarketReviewPost, "slug">)[] = [
       "Optimisme pasar akibat 'Efek Purbaya' dengan target IHSG 10.000 dan reli global serentak, didukung oleh data ekonomi AS dan Indonesia yang solid.",
     pdfEmbedLink:
       "https://drive.google.com/file/d/1bdhif8mhhnfJea7XTKtmaORh_JQ1tmBw/preview",
+    coverImage: "/market-review/mr6.webp",
   },
   {
     id: 17,
@@ -247,6 +248,7 @@ const posts: (Omit<NewsPost, "slug"> | Omit<MarketReviewPost, "slug">)[] = [
       "Laporan ini mencatat rekor baru IHSG yang ditopang oleh rotasi agresif ke sektor infrastruktur dan energi serta optimisme ekonomi 2026, di tengah kejatuhan Nikkei akibat sinyal kebijakan moneter Jepang.",
     pdfEmbedLink:
       "https://drive.google.com/file/d/1GtyWsG1lfEDyfdGVYp5sk1H4r1My-iga/preview",
+    coverImage: "/market-review/mr5.webp",
   },
   {
     id: 18,
@@ -256,6 +258,7 @@ const posts: (Omit<NewsPost, "slug"> | Omit<MarketReviewPost, "slug">)[] = [
       "Dokumen ini menyoroti rekor tertinggi baru IHSG yang dipicu oleh suntikan likuiditas fiskal dan reli sektor properti, sementara pasar global merayakan optimisme pelonggaran moneter meski sektor teknologi terkoreksi.",
     pdfEmbedLink:
       "https://drive.google.com/file/d/1lBGXj0JQqVh9cGfTiMj-7d75G9iOSQG8/preview",
+    coverImage: "/market-review/mr4.webp",
   },
   {
     id: 19,
@@ -265,6 +268,7 @@ const posts: (Omit<NewsPost, "slug"> | Omit<MarketReviewPost, "slug">)[] = [
       "Edisi ini mengulas keputusan mengejutkan BI memangkas suku bunga dan lonjakan sektor perindustrian yang menopang pasar, di tengah ketidakpastian kebijakan The Fed dan divergensi pasar Asia.",
     pdfEmbedLink:
       "https://drive.google.com/file/d/1vHi5aNCgUt2ghCyOL_4u1BFgw6SKRJHE/preview",
+    coverImage: "/market-review/mr3.webp",
   },
   {
     id: 20,
@@ -274,6 +278,7 @@ const posts: (Omit<NewsPost, "slug"> | Omit<MarketReviewPost, "slug">)[] = [
       "Laporan ini membahas paradoks pertumbuhan PDB Indonesia yang kuat (5,12%) namun IHSG terkoreksi tajam akibat demonstrasi politik domestik, serta tekanan global dari sinyal hawkish The Fed.",
     pdfEmbedLink:
       "https://drive.google.com/file/d/1_QCZ1swSj3Bfbmu0szFDglJ5pVTbBe8-/preview",
+    coverImage: "/market-review/mr2.webp",
   },
   {
     id: 21,
@@ -283,6 +288,7 @@ const posts: (Omit<NewsPost, "slug"> | Omit<MarketReviewPost, "slug">)[] = [
       "Edisi ini menyoroti penguatan moderat IHSG yang didorong oleh kesepakatan penurunan tarif impor AS menjadi 19% dan euforia IPO emiten baru, meskipun dibayangi arus keluar modal asing.",
     pdfEmbedLink:
       "https://drive.google.com/file/d/1xjE7C3z3OjKar8KIHof8oNav5psSprSM/preview",
+    coverImage: "/market-review/mr1.webp",
   },
 ];
 

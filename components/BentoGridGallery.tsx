@@ -54,7 +54,7 @@ const BentoGridItem = ({
         <h3 className="leading-4 text-base sm:text-xl md:text-2xl font-bold">
           {item.title}
         </h3>
-        <p className="mt-2 text-xs md:text-sm leading-tight">
+        <p className="mt-2 text-xs md:text-sm leading-tight line-clamp-3">
           {item.description}
         </p>
         <Link
